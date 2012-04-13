@@ -8,7 +8,7 @@
   
   = f.fields_for(:answers) do |f_answer|
   
-    %label{for: f_answer.object.id, :"data-toggle" => "buttons-radio" } 
+    %label.question{for: f_answer.object.id, :"data-toggle" => "buttons-radio" } 
       = f_answer.object.question.prompt
       %br
       %label.radio.btn
