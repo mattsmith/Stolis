@@ -5,6 +5,14 @@
       %ul
         - @quiz.errors.full_messages.each do |msg|
           %li= msg
+  
+  = f.label :email
+  = f.email_field :email
+  
+  = f.fields_for(:answers) do |f_answers|
+    = f_answers.radio_button :choice, f_answers.object.question.choice_1
+    = f_answers.radio_button :choice, f_answers.object.question.choice_2
+    = f_answers.radio_button :choice, f_answers.object.question.choice_3
 
   .actions
     = f.submit 'Save'

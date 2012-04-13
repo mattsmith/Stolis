@@ -1,11 +1,2 @@
-= form_for @quiz do |f|
-  -if @quiz.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@quiz.errors.count, "error")} prohibited this quiz from being saved:"
-      %ul
-        - @quiz.errors.full_messages.each do |msg|
-          %li= msg
 
-  .actions
-    = f.submit 'Save'
-
+= link_to 'New Quiz', new_quiz_path, class: "btn"
