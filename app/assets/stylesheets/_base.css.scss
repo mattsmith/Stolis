@@ -5,10 +5,18 @@
 	img { max-width: 100%; }
 }
 
-.radio input[type="radio"] {
-	 position: absolute !important; clip: rect(1px 1px 1px 1px); clip: rect(1px,1px,1px,1px); 
+
+label {
+	font-size: 14px;
+	font-weight: bold;
 }
 
 .radio {
 	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	
+	input[type="radio"] {
+		 position: absolute !important; clip: rect(1px 1px 1px 1px); clip: rect(1px,1px,1px,1px); 
+	}
 }
