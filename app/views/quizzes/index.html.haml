@@ -1,17 +1,11 @@
-%h1 Listing quizzes
+= form_for @quiz do |f|
+  -if @quiz.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@quiz.errors.count, "error")} prohibited this quiz from being saved:"
+      %ul
+        - @quiz.errors.full_messages.each do |msg|
+          %li= msg
 
-%table
-  %tr
-    %th
-    %th
-    %th
+  .actions
+    = f.submit 'Save'
 
-  - @quizzes.each do |quiz|
-    %tr
-      %td= link_to 'Show', quiz
-      %td= link_to 'Edit', edit_quiz_path(quiz)
-      %td= link_to 'Destroy', quiz, :confirm => 'Are you sure?', :method => :delete
-
-%br
-
-= link_to 'New Quiz', new_quiz_path

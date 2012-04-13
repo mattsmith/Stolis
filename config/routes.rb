@@ -1,4 +1,4 @@
 Stolis::Application.routes.draw do
-  resources :quiz
-  root :to => 'quiz#index'
+  resources :quizzes
+  root :to => 'quizzes#new'
 end
