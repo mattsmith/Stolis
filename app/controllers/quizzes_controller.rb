@@ -13,7 +13,8 @@ class QuizzesController < ApplicationController
   end
 
   def new
-    @quiz = Quiz.create!
+    drinks = ['big-oh.jpg', 'iceberry.jpg', 'liquid-sunshine.jpg', 'smashberry.jpg']
+    @quiz = Quiz.create! cocktail: drinks.sample
     Question.random.each do |question|
       @quiz.answers.create!(question: question)
     end
