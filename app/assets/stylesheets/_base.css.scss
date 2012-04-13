@@ -1,6 +1,10 @@
 @import "bootstrap";
 @import "bootstrap-responsive"; 
 
+.container {
+	margin: 10px;
+}
+
 .drink {
 	img { max-width: 100%; }
 }

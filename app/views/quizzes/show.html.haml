@@ -1,5 +1,10 @@
-.drink= image_tag @quiz.cocktail
+#drink.drink= image_tag @quiz.cocktail
 
 .row
   .span12{style: "text-align: center;"}
     = link_to "Do another!", new_quiz_path, class: "btn btn-success btn-large"
+    
+:javascript
+  var a = alice.init(),
+          drink = document.getElementById("drink").children;
+  a.spin("drink", "left", 1, 0, "3000ms", "ease", "0ms", 1, "normal", "running");
