@@ -19,7 +19,15 @@ label {
 	margin: 20px 0;
 	.btn{
 		margin: 10px 0;
+		padding: 10px;
+		&.active {
+			background-color: #5BB75B;
+			color: #fff;
+		}
 	}
+}
+
+.btn.active{
 }
 
 .radio {
