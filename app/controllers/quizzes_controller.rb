@@ -15,9 +15,8 @@ class QuizzesController < ApplicationController
   def new
     @quiz = Quiz.create!
     Question.random.each do |question|
-      @quiz.answers.build(question: question)
+      @quiz.answers.create!(question: question)
     end
-    logger.debug @quiz.answers
     respond_with @quiz
   end
 

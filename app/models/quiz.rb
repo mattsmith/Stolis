@@ -1,7 +1,7 @@
 class Quiz < ActiveRecord::Base
   has_many :answers, dependent: :destroy
 
-  attr_accessible :cocktail, :email
+  attr_accessible :cocktail, :email, :answers_attributes
 
   accepts_nested_attributes_for :answers
 end
