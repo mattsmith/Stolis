@@ -4,3 +4,11 @@
 .drink {
 	img { max-width: 100%; }
 }
+
+.radio input[type="radio"] {
+	 position: absolute !important; clip: rect(1px 1px 1px 1px); clip: rect(1px,1px,1px,1px); 
+}
+
+.radio {
+	display: block;
+}

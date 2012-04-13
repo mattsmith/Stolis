@@ -1,3 +1,7 @@
 - drinks = ['big-oh.jpg', 'iceberry.jpg', 'liquid-sunshine.jpg', 'smashberry.jpg']
 
 .drink= image_tag drinks.sample
+
+.row
+  .span12
+    = link_to "Take the Personality Quiz", new_quiz_path, class: "btn btn-success btn-large"
